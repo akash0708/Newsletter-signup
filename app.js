@@ -54,8 +54,8 @@ app.post("/", function(req, res){
     const lastName = req.body.lName
     const email = req.body.email
 
-    const apiKey = '16e0910610bf6f37d9b365347d60d0aa-us10';
-const listId = '98c3601391';
+    const apiKey = process.env.API_KEY;
+    const listId = process.env.LIST_ID;
 const url = `https://us10.api.mailchimp.com/3.0/lists/${listId}/members`;
 
 const data = {
